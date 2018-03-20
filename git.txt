@@ -1,0 +1,30 @@
+
+
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+通过git init命令把这个目录变成Git可以管理的仓库：
+$ git init
+Initialized empty Git repository in /Users/michael/learngit/.git/
+
+第一步，用命令git add告诉Git，把文件添加到仓库：
+$ git add readme.txt
+第二步，用命令git commit告诉Git，把文件提交到仓库：
+$ git commit -m "wrote a readme file"
+
+
+本地仓库与远程关联
+在本地的learngit仓库下运行命令：
+$ git remote add origin git@github.com:michaelliao/learngit.git
+
+请千万注意，把上面的michaelliao替换成你自己的GitHub账户名，
+否则，你在本地关联的就是我的远程库，关联没有问题，
+但是你以后推送是推不上去的，因为你的SSH Key公钥不在我的账户列表中。
+
+本地库的所有内容推送到远程库上：
+$ git push -u origin master
+
+由于远程库是空的，我们第一次推送master分支时，加上了-u参数，
+Git不但会把本地的master分支内容推送的远程新的master分支，
+还会把本地的master分支和远程的master分支关联起来，
+在以后的推送或者拉取时就可以简化命令。
