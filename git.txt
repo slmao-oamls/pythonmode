@@ -43,3 +43,8 @@ github的项目克隆到本地目录里
 $ git clone git@github.com:michaelliao/gitskills.git
 
 如果有多个人协作开发，那么每个人各自从远程克隆一份就可以了
+
+要查看远程库的信息，用git remote：
+或者，用git remote -v显示更详细的信息：
+
+$ git pull 从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
